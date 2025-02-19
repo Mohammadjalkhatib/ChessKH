@@ -73,7 +73,6 @@ A simplified flow of the system is illustrated below:
 ```
 
 ---
-
 ## Dataset
 
 A custom dataset was created to meet the specific needs of chess piece and board detection with YOLOv8:
@@ -89,6 +88,32 @@ A custom dataset was created to meet the specific needs of chess piece and board
 
 - **Class Distribution:**  
   The datasets include standard chess pieces (both colors) along with the board class, ensuring robust training for the YOLOv8x model.
+
+This repository contains two complementary datasets: `chess_dataset_topview` and `chess_mydata`. These datasets were prepared and processed using Roboflow, focusing on chess piece detection and analysis from a top-down perspective. The `chess_dataset_topview` provides bird's-eye view images of chess configurations, while `chess_mydata` supplements this with additional chess-related data. These datasets are suitable for computer vision tasks such as chess piece detection, board position analysis, and automated chess game tracking.
+
+### How to Use the Data
+
+1. **Direct Download**: Clone this repository using:
+```bash
+git clone https://github.com/Mohammadjalkhatib/ChessKH
+```
+
+2. **Roboflow Integration**: Access the datasets programmatically using Roboflow:
+```python
+from roboflow import Roboflow
+rf = Roboflow(api_key="your-api-key")
+
+# Load chess_dataset_topview
+chess_topview = rf.workspace().project("chess_dataset_topview").version(1).download("yolov5")
+
+# Load chess_mydata
+chess_mydata = rf.workspace().project("chess_mydata").version(1).download("yolov5")
+```
+
+3. **Dataset Format**: The data is provided in YOLOv5 format, which includes:
+   - Images in `.jpg` or `.png` format
+   - Labels in `.txt` files
+   - `data.yaml` configuration file
 
 ---
 
