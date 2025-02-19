@@ -104,10 +104,10 @@ from roboflow import Roboflow
 rf = Roboflow(api_key="your-api-key")
 
 # Load chess_dataset_topview
-chess_topview = rf.workspace().project("chess_dataset_topview").version(1).download("yolov5")
+chess_topview = rf.workspace().project("chess_dataset_topview").version(1).download("yolov8")
 
 # Load chess_mydata
-chess_mydata = rf.workspace().project("chess_mydata").version(1).download("yolov5")
+chess_mydata = rf.workspace().project("chess_mydata").version(1).download("yolov8")
 ```
 
 3. **Dataset Format**: The data is provided in YOLOv5 format, which includes:
