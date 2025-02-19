@@ -146,6 +146,33 @@ A key innovation was the conversion of YOLOv8x detection outputs into FEN notati
 
 ---
 
+## Stockfish Chess Engine
+
+Stockfish is a powerful, open-source chess engine renowned for its high performance and accuracy. In this project, Stockfish analyzes the board state represented in FEN notation and computes the optimal move.
+
+### Download and Installation
+
+1. **Download:**
+   - Visit the [official Stockfish website](https://stockfishchess.org/download/) to download the latest version for your operating system (Windows, macOS, or Linux).
+
+2. **Installation:**
+   - **Windows:**  
+     - Download the ZIP file and extract it.
+     - Place the extracted executable in a directory of your choice.
+   - **macOS/Linux:**  
+     - Download the appropriate binary or build from source.
+     - To build from source, clone the repository using:
+       ```bash
+       git clone https://github.com/official-stockfish/Stockfish.git
+       ```
+       Follow the provided build instructions.
+
+3. **Integration:**
+   - Ensure that the Stockfish executable is in your system's PATH, or specify its location in the project’s configuration.
+   - The project communicates with Stockfish via the Universal Chess Interface (UCI) protocol.
+
+---
+
 ## Robotics Integration
 
 ### Quanser QArm Overview
